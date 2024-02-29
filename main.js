@@ -251,8 +251,9 @@ const filterByPrice = () => {
   printGames(filtered);
 };
 
-printGames(boardGames);
+
 createSelectSeller();
 setUpInputPrice();
 setUpClearFiltersButton();
 filterByPrice();
+printGames(boardGames);
