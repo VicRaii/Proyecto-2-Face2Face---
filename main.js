@@ -133,12 +133,15 @@ const createSelectSeller = () => {
   const selectSeller = document.createElement("select");
   const selectDescription = document.createElement("h3");
 
+  const optionAll = document.createElement("option");
+  optionAll.value = "";
+  optionAll.textContent = "All Sellers";
+  selectSeller.appendChild(optionAll);
+
   for (const seller of SELLERS) {
     const option = document.createElement("option");
-
     option.value = seller;
     option.textContent = seller;
-
     selectSeller.appendChild(option);
   }
 
@@ -228,6 +231,7 @@ const setUpInputPrice = () => {
 const clearFilters = () => {
   SELLER = "";
   document.querySelector("#selectSeller").value = "";
+  document.querySelector("#inputPrice input").value = "";
   filter();
 };
 
@@ -251,8 +255,8 @@ const filterByPrice = () => {
   printGames(filtered);
 };
 
-printGames(boardGames);
 createSelectSeller();
 setUpInputPrice();
 setUpClearFiltersButton();
 filterByPrice();
+printGames(boardGames);
