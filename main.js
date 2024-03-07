@@ -164,7 +164,7 @@ const printGames = (filteredGames) => {
   const divGames = document.querySelector("#products");
   
   if (filteredGames.length === 0) {
-    divGames.innerHTML = "<p>No se encontraron resultados.</p>";
+    divGames.innerHTML = "<p>I'm sorry, no results found.</p>";
     return;
   }
 
