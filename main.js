@@ -165,6 +165,7 @@ const printGames = (filteredGames) => {
 
   if (filteredGames.length === 0) {
     divGames.innerHTML = <p>I'm sorry, there are no results with those filters!</p>
+      return;
   }
   
   const ulGames = document.createElement("ul");
