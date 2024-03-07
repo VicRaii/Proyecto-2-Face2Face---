@@ -250,8 +250,6 @@ const setUpClearFiltersButton = () => {
 
   clearFiltersButton.textContent = "🧹 ";
   filterDiv.appendChild(clearFiltersButton);
-
-  filter();
 };
 
 const filterByPrice = () => {
