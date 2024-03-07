@@ -162,12 +162,12 @@ const createSelectSeller = () => {
 
 const printGames = (filteredGames) => {
   const divGames = document.querySelector("#products");
-
-  if (filteredGames.length === 0) {
-    divGames.innerHTML = <p>I'm sorry, there are no results with those filters!</p>
-      return;
-  }
   
+  if (filteredGames.length === 0) {
+    divGames.innerHTML = "<p>No se encontraron resultados.</p>";
+    return;
+  }
+
   const ulGames = document.createElement("ul");
   divGames.innerHTML = "";
 
