@@ -103,16 +103,18 @@ const SELLERS = [];
 
 let SELLER = "";
 
+let PRICE = null;
+
 const filterDiv = document.querySelector("#filter");
 
 const filter = () => {
-  const filtered = [];
+  const filtered = boardGames.filter(boardGame => {
 
-  for (const boardGame of boardGames) {
-    if (SELLER === boardGame.seller || SELLER === "") {
-      filtered.push(boardGame);
-    }
-  }
+    const sellerMatch = SELLER ? boardGame.seller === SELLER : true;
+
+    const priceMatch = PRICE ? parseFloat(boardGame.price) < PRICE : true;
+    return sellerMatch && priceMatch;
+  });
   printGames(filtered);
 };
 
@@ -245,14 +247,10 @@ const setUpClearFiltersButton = () => {
 };
 
 const filterByPrice = () => {
-  const priceInput = document.querySelector("input");
-  const price = parseFloat(priceInput.value);
+  const priceInput = document.querySelector("#inputPrice input");
+  PRICE = parseFloat(priceInput.value);
 
-  const filtered = boardGames.filter((game) => {
-    return parseFloat(game.price) < price;
-  });
-
-  printGames(filtered);
+  filter();
 };
 
 createSelectSeller();
