@@ -230,8 +230,8 @@ const setUpInputPrice = () => {
 
 const clearFilters = () => {
   SELLER = "";
-  document.querySelector("#selectSeller").value = "All Sellers";
-  document.querySelector("#inputPrice input").value = "All Sellers";
+  document.querySelector("#selectSeller select").value = "";
+  document.querySelector("#inputPrice input").value = "";
   filter();
 };
 
