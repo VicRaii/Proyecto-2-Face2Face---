@@ -240,6 +240,7 @@ const clearFilters = () => {
   SELLER = "";
   document.querySelector("#selectSeller select").value = "";
   document.querySelector("#inputPrice input").value = "";
+  PRICE = null;
   filter();
 };
 
