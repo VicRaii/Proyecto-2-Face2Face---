@@ -103,16 +103,17 @@ const SELLERS = [];
 
 let SELLER = "";
 
+let PRICE = null;
+
 const filterDiv = document.querySelector("#filter");
 
 const filter = () => {
-  const filtered = [];
+  const filtered = boardGames.filter((boardGame) => {
+    const sellerMatch = SELLER ? boardGame.seller === SELLER : true;
 
-  for (const boardGame of boardGames) {
-    if (SELLER === boardGame.seller || SELLER === "") {
-      filtered.push(boardGame);
-    }
-  }
+    const priceMatch = PRICE ? parseFloat(boardGame.price) < PRICE : true;
+    return sellerMatch && priceMatch;
+  });
   printGames(filtered);
 };
 
@@ -160,6 +161,12 @@ const createSelectSeller = () => {
 
 const printGames = (filteredGames) => {
   const divGames = document.querySelector("#products");
+
+  if (filteredGames.length === 0) {
+    divGames.innerHTML = "<p>I'm sorry, no results found.</p>";
+    return;
+  }
+
   const ulGames = document.createElement("ul");
   divGames.innerHTML = "";
 
@@ -230,8 +237,9 @@ const setUpInputPrice = () => {
 
 const clearFilters = () => {
   SELLER = "";
-  document.querySelector("#selectSeller").value = "All Sellers";
-  document.querySelector("#inputPrice input").value = "All Sellers";
+  document.querySelector("#selectSeller select").value = "";
+  document.querySelector("#inputPrice input").value = "";
+  PRICE = null;
   filter();
 };
 
@@ -245,14 +253,10 @@ const setUpClearFiltersButton = () => {
 };
 
 const filterByPrice = () => {
-  const priceInput = document.querySelector("input");
-  const price = parseFloat(priceInput.value);
+  const priceInput = document.querySelector("#inputPrice input");
+  PRICE = parseFloat(priceInput.value);
 
-  const filtered = boardGames.filter((game) => {
-    return parseFloat(game.price) < price;
-  });
-
-  printGames(filtered);
+  filter();
 };
 
 createSelectSeller();
