@@ -97,6 +97,14 @@ const boardGames = [
     seller: "Tranjis Games",
     image: "/assets/virus-juego-de-mesa.jpg",
   },
+  {
+    name: "Back to the Future",
+    price: 20.2,
+    stars: 4.9,
+    reviews: 1987,
+    seller: "Funko Games",
+    image: "/assets/back-to-the-future.jpg",
+  },
 ];
 
 const SELLERS = [];
