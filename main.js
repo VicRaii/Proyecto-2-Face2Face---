@@ -7,7 +7,7 @@ const boardGames = [
     stars: 5,
     reviews: 1452,
     seller: "Games Workshop",
-    image: "/assets/talisman-kingdom-hearts.png",
+    image: "/talisman-kingdom-hearts.png",
   },
   {
     name: "Rummikub",
@@ -15,7 +15,7 @@ const boardGames = [
     stars: 4.7,
     reviews: 789,
     seller: "Goliath",
-    image: "/assets/Rummikub.webp",
+    image: "/Rummikub.webp",
   },
   {
     name: "Bahamas",
@@ -23,7 +23,7 @@ const boardGames = [
     stars: 4.7,
     reviews: 1023,
     seller: "Tranjis Games",
-    image: "/assets/bahamas.webp",
+    image: "/bahamas.webp",
   },
   {
     name: "Dobble Harry Potter",
@@ -31,7 +31,7 @@ const boardGames = [
     stars: 4.7,
     reviews: 1103,
     seller: "Spot it! Game",
-    image: "/assets/Dobble-Harry-Potter.png",
+    image: "/Dobble-Harry-Potter.png",
   },
   {
     name: "Hombres lobo de Castronegro",
@@ -39,7 +39,7 @@ const boardGames = [
     stars: 4,
     reviews: 875,
     seller: "Zygomatic",
-    image: "/assets/lobos de castronegro.png",
+    image: "/lobos de castronegro.png",
   },
   {
     name: "UNO Flip",
@@ -47,7 +47,7 @@ const boardGames = [
     stars: 4.6,
     reviews: 652,
     seller: "Mattel Games",
-    image: "/assets/Uno flip.webp",
+    image: "/Uno flip.webp",
   },
   {
     name: "Arre Unicornio",
@@ -55,7 +55,7 @@ const boardGames = [
     stars: 3.9,
     reviews: 1346,
     seller: "Cerebrer Games",
-    image: "/assets/arre-unicornio.jpg",
+    image: "/arre-unicornio.jpg",
   },
   {
     name: "Misión Cumplida",
@@ -63,7 +63,7 @@ const boardGames = [
     stars: 3,
     reviews: 921,
     seller: "Zacatrus",
-    image: "/assets/mision-cumplida.png",
+    image: "/mision-cumplida.png",
   },
   {
     name: "Cluedo Harry Potter",
@@ -71,7 +71,7 @@ const boardGames = [
     stars: 4.7,
     reviews: 1103,
     seller: "Games Workshop",
-    image: "/assets/Cluedo-Harry-Potter-White-Edition.png",
+    image: "/Cluedo-Harry-Potter-White-Edition.png",
   },
   {
     name: "Mortal",
@@ -79,23 +79,23 @@ const boardGames = [
     stars: 3,
     reviews: 986,
     seller: "Atomo Games",
-    image: "/assets/el-mortal.jpg",
+    image: "/el-mortal.jpg",
   },
-  {
-    name: "Twister",
-    price: 18.79,
-    stars: 4.7,
-    reviews: 632,
-    seller: "Hasbro Gaming",
-    image: "/assets/Twister.jpg",
-  },
+  // {
+  //   name: "Twister",
+  //   price: 18.79,
+  //   stars: 4.7,
+  //   reviews: 632,
+  //   seller: "Hasbro Gaming",
+  //   image: "/Twister.jpg",
+  // },
   {
     name: "Virus",
     price: 16.0,
     stars: 4.9,
     reviews: 987,
     seller: "Tranjis Games",
-    image: "/assets/virus-juego-de-mesa.jpg",
+    image: "/virus-juego-de-mesa.jpg",
   },
   {
     name: "Back to the Future",
@@ -103,7 +103,7 @@ const boardGames = [
     stars: 4.9,
     reviews: 1987,
     seller: "Funko Games",
-    image: "/assets/back-to-the-future.jpg",
+    image: "/back-to-the-future.jpg",
   },
 ];
 
